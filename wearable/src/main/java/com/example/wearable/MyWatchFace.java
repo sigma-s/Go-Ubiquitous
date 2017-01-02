@@ -360,7 +360,7 @@ public class MyWatchFace extends CanvasWatchFaceService {
                 Rect temperatureBounds = new Rect();
                 mHighTemperatureTextPaint.getTextBounds(mHighTemperature, 0, mHighTemperature.length(), temperatureBounds);
 
-                float mLineYOffset = (mDateYOffset + mWeatherYOffset) / 2 + (temperatureBounds.height() / 2);
+                float mLineYOffset = (mDateYOffset + mWeatherYOffset) / 2 - (temperatureBounds.height() / 2);
                 canvas.drawLine(bounds.centerX() - 4 * SPACE_BETWEEN_TEMPERATURES, mLineYOffset,
                         bounds.centerX() + 4 * SPACE_BETWEEN_TEMPERATURES, mLineYOffset, mLinePaint);
 
